@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<div class = " col-8 m-auto p-auto">
+    <h3> Register to Login</h3>
+    <form action = ""  method = "POST" class = 'mt-5'>
+        {% csrf_token %}
+       </nav>
+        {{ register_form.as_p }}
+       <button type= "submit"> Register </button>
+    </form>
+
+
+</div>
+{% endblock content %}

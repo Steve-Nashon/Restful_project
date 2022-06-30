@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<div class = " col-6 m-auto p-auto">
+    <h3> Update Order</h3>
+    <form action = ""  method = "POST" class = 'form-control form-select'>
+        {% csrf_token %}
+       </nav>
+        {{ form }}
+        <input type="submit" value="Submit" class="btn btn-outline-success m-3 p-auto col-3" >
+    </form>
+</div>
+
+
+
+{% endblock content %}
+

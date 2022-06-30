@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inventory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class = "col-4 justify-content-center m-auto p-auto">
+    {% if messages %}
+    {% for m in messages %}
+      <div class = "alert alert-info alert-dismissible fade show" role="alert">
+        {{m}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+      </div>
+    {% endfor %}
+  {% endif %}
+    </div>
+<div>
+<div>
+  <ul class="nav justify-content-end m-2 p-3">
+  {% if user.is_authenticated %}
+  <li class="nav-item m-2 p-2">
+    <p> You have logged in as:<br>
+      <strong class= "center">
+  {{user.username}}
+      </strong>
+    </p>
+  </li>
+  <li class="nav-item m-1 p-2">
+  <a class="btn btn-primary" href= {% url 'logout' %} role="button">Logout</a>
+  </li>
+  </ul>
+</div>
+
+
+  {% endif %}
+
+    <h3> Retrive_all </h3>
+    <div class = "row">
+    <div class = "col-8">
+    <a href="{% url 'add' %}" class="btn btn-info m-auto p-auto" role="button" data-bs-toggle="button">Add New Item</a>
+    <a href="{% url 'addcategory' %}" class="btn btn-info m-auto p-auto" role="button" data-bs-toggle="button">Add New Category</a> 
+    </div>
+    <div class = "col-3">
+      filter by category
+      <form  method = "get">
+          {{filt.form}}
+    </form>
+  </div>
+</div>
+{% if all_items %}
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Item Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Update</th>
+     
+          </tr>
+        </thead>
+        <tbody name = "category">
+          {% for item in all_items %}
+          <tr>
+            <td>{{item.item}}</td>
+            <td>{{item.category}}</td>
+            <td>
+            <a href="update/{{item.id}}" class="btn btn-info m-auto p-auto" role="button" data-bs-toggle="button">Update</a>
+            <a href="delete/{{item.id}}" class="btn btn-danger m-auto p-auto" role="button" data-bs-toggle="button">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>   
+      </table>
+      {% endif %}
+
+    </div>
+
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{% url 'orders' %}">view all Orders</a>
+      </li>
+    </ul>
+  </body>
+</html>

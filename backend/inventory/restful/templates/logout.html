@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<div class = " col-8 m-auto p-auto">
+    <h3>You are logged out</h3>
+
+
+    <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'login' %}">click here login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'register' %}">click here register</a>
+        </li>
+      </ul>
+
+
+</div>
+{% endblock content %}
