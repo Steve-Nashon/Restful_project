@@ -3,8 +3,13 @@ from . import views
 
 urlpatterns = [
 
-    path('apiget',views.getdt,name='api'),
-    path('apipost',views.addItem,name='api'),
+
+    path('description',views.description,name='description'),
+    path('allitems',views.allitems,name='allitems'),
+    path('getsingleitem/<int:id>',views.getsingleitem,name='getsingleitem'),
+    path('addItem',views.addItem,name='addItem'),
+    path('updateitem/<int:id>',views.updateitem,name='updateitem'),
+    path('deleteitem/<int:id>',views.deleteitem,name='deleteitem'),
 
 
 ]
