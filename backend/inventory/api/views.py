@@ -2,11 +2,13 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from restful.models import Item 
 from api.serializers import InventorySerializer
+from rest_framework.authtoken.models import Token
 
 endpoint = "localhost/description"
 
 @api_view(['GET'])
 def allitems(request):
+    data = {}
     items = Item.objects.all()
     serializer = InventorySerializer(items, many = True )
     return Response(serializer.data)
