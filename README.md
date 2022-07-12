@@ -1,5 +1,5 @@
 # setting up Restful_project 
-  ## first install all the project dependecies am assuming that python is installed and configured 
+  ## install all the project dependecies am assuming that python is installed and configured 
 **pip install -r requirements.txt**
  ## Configure your postgress database
 - from r'/Restful_project/backend/inventory/inventory' open setting.py and update your database connection credential respectively \
