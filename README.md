@@ -3,11 +3,11 @@
 **pip install -r requirements.txt**
  ## Configure your postgress database
 - from r'/Restful_project/backend/inventory/inventory' open setting.py and update your database connection credential respectively \
-      &emsp;&emsp;  'NAME': 'Database Name', \
-      &emsp;&emsp;  'USER':'Your USER', \
-       &emsp;&emsp; 'PASSWORD':'Your PASSWORD', \
-       &emsp;&emsp; 'HOST':'localhost', \
-       &emsp;&emsp; 'PORT':'5432', \
+      &emsp;&emsp;  'NAME': &emsp;'Database Name', \
+      &emsp;&emsp;  'USER':&emsp;'Your User Name', \
+       &emsp;&emsp; 'PASSWORD':&emsp;'Your PASSWORD', \
+       &emsp;&emsp; 'HOST':&emsp;'localhost'Specify db host server, \
+       &emsp;&emsp; 'PORT':&emsp;'5432'; Specify port number, 
    ## make db migration and create db migration
    - from r'/Restful_project/backend/inventory' make db migration \
    &emsp;&emsp; **python manage.py makemigrations**
