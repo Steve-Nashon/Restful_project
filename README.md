@@ -18,6 +18,6 @@
   &emsp;&emsp;  **python manage.py runserver 8000** \
   you can change the port to the one that you have configured your django with.
   ## open Restful_project urls
-  from your web browser launch **localhost/description** to get a list of the project descriptions and endpoints
+  from your web browser launch **localhost/description** to get a json list of the project urls and endpoints.
   
 
