@@ -6,8 +6,8 @@
       &emsp;&emsp;  'NAME': &emsp;'Database Name', \
       &emsp;&emsp;  'USER':&emsp;'Your User Name', \
        &emsp;&emsp; 'PASSWORD':&emsp;'Your PASSWORD', \
-       &emsp;&emsp; 'HOST':&emsp;'localhost'Specify db host server, \
-       &emsp;&emsp; 'PORT':&emsp;'5432'; Specify port number, 
+       &emsp;&emsp; 'HOST':&emsp;'localhost' &emsp; Specify db host server, \
+       &emsp;&emsp; 'PORT':&emsp;'5432'; &emsp; Specify port number, 
    ## make db migration and create db migration
    - from r'/Restful_project/backend/inventory' make db migration \
    &emsp;&emsp; **python manage.py makemigrations**
